@@ -1,0 +1,59 @@
+.image-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+}
+
+.bordered-image {
+    border: 2px solid #000; /* You can adjust the border properties */
+    display: inline-block;
+    padding: 10px; /* You can adjust the padding as needed */
+}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: fixed; /* Fixed position for the tooltip */
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100vh;
+    left: 50vw;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    top: 10px; /* Adjust the distance from the cursor as needed */
+    left: 10px; /* Adjust the distance from the cursor as needed */
+}
